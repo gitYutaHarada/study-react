@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Footer } from "../../../components/Footer";
 import { Links } from "../../../components/Links"
-import Link from "next/link";
 import { Headline } from "../../../components/Headline";
  
 export default function Home() {
