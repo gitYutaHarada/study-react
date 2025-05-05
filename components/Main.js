@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { Footer } from "../../components/Footer";
-import { Links } from "../../components/Links";
-import { Headline } from "../../components/Headline";
+import { Links } from "./Links";
+import { Headline } from "./Headline";
 
 export function Main() {
   return (
