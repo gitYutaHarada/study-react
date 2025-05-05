@@ -20,7 +20,6 @@ const ITEMS = [
 
 export function Links() {
   return (
-
     <div className={classes.links}>
       {ITEMS.map((item) => {
         return (
