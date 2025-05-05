@@ -1,0 +1,111 @@
+.links {
+    display: flex;              /* flex */
+    gap: 1rem;                  /* gap-4 → 16px = 1rem */
+    align-items: center;        /* items-center */
+    flex-direction: column;     /* flex-col */
+  }
+  
+  /* sm:flex-row → 640px以上で横並び */
+  @media (min-width: 640px) {
+    .links {
+      flex-direction: row;
+    }
+  }
+
+  .linksDeploy {
+    border-radius: 9999px;              /* rounded-full */
+    border-width: 1px;                  /* border */
+    border-style: solid;               /* border-solid */
+    border-color: transparent;         /* border-transparent */
+    transition-property: color, background-color, border-color; /* transition-colors */
+    transition-duration: 150ms;
+    display: flex;                      /* flex */
+    align-items: center;               /* items-center */
+    justify-content: center;           /* justify-center */
+    background-color: var(--foreground); /* bg-foreground */
+    color: var(--background);            /* text-background */
+    gap: 0.5rem;                        /* gap-2 = 8px */
+    font-weight: 500;                  /* font-medium */
+    font-size: 0.875rem;               /* text-sm = 14px */
+    height: 2.5rem;                    /* h-10 = 40px */
+    padding-left: 1rem;                /* px-4 = 16px */
+    padding-right: 1rem;
+    width: auto;                       /* sm:w-auto default に明示 */
+  }
+  
+  /* sm: メディアクエリ（min-width: 640px） */
+  @media (min-width: 640px) {
+    .linksDeploy {
+      font-size: 1rem;                /* sm:text-base = 16px */
+      height: 3rem;                   /* sm:h-12 = 48px */
+      padding-left: 1.25rem;          /* sm:px-5 = 20px */
+      padding-right: 1.25rem;
+      width: auto;                    /* sm:w-auto（再確認） */
+    }
+  }
+  
+  /* hover:bg-[#383838] */
+  .linksDeploy:hover {
+    background-color: #383838;
+  }
+  
+  /* dark:hover:bg-[#ccc]（ダークモードでのホバー） */
+  @media (prefers-color-scheme: dark) {
+    .linksDeploy:hover {
+      background-color: #ccc;
+    }
+  }
+
+
+  .linksRead {
+    border-radius: 9999px;               /* rounded-full */
+    border-width: 1px;                   /* border */
+    border-style: solid;                 /* border-solid */
+    border-color: rgba(0, 0, 0, 0.08);   /* border-black/[.08] */
+    transition-property: color, background-color, border-color;
+    transition-duration: 150ms;          /* transition-colors */
+    display: flex;                       /* flex */
+    align-items: center;                 /* items-center */
+    justify-content: center;             /* justify-center */
+    font-weight: 500;                    /* font-medium */
+    font-size: 0.875rem;                 /* text-sm */
+    height: 2.5rem;                      /* h-10 = 40px */
+    padding-left: 1rem;                  /* px-4 = 16px */
+    padding-right: 1rem;
+    width: 100%;                         /* w-full */
+  }
+  
+  /* sm (≥640px) */
+  @media (min-width: 640px) {
+    .linksRead {
+      font-size: 1rem;                   /* sm:text-base = 16px */
+      height: 3rem;                      /* sm:h-12 = 48px */
+      padding-left: 1.25rem;             /* sm:px-5 = 20px */
+      padding-right: 1.25rem;
+      width: auto;                       /* sm:w-auto */
+    }
+  }
+  
+  /* md (≥768px) */
+  @media (min-width: 768px) {
+    .linksRead {
+      width: 158px;                      /* md:w-[158px] */
+    }
+  }
+  
+  /* hover */
+  .linksRead:hover {
+    background-color: #f2f2f2;           /* hover:bg-[#f2f2f2] */
+    border-color: transparent;          /* hover:border-transparent */
+  }
+  
+  /* dark mode border and hover */
+  @media (prefers-color-scheme: dark) {
+    .linksRead {
+      border-color: rgba(255, 255, 255, 0.145);  /* dark:border-white/[.145] */
+    }
+    .linksRead:hover {
+      background-color: #1a1a1a;         /* dark:hover:bg-[#1a1a1a] */
+    }
+  }
+  

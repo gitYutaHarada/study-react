@@ -1,0 +1,14 @@
+.main {
+    display: flex;                 /* flex */
+    flex-direction: column;       /* flex-col */
+    gap: 32px;                    /* gap-[32px] */
+    grid-row-start: 2;            /* row-start-2（※親が display: grid の場合） */
+    align-items: center;          /* items-center */
+  }
+  
+  /* sm:items-start → 640px以上で左寄せに変更 */
+  @media (min-width: 640px) {
+    .main {
+      align-items: flex-start;
+    }
+  }

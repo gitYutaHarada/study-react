@@ -1,0 +1,19 @@
+.footer {
+    grid-row-start: 3;           /* row-start-3 */
+    display: flex;               /* flex */
+    gap: 24px;                   /* gap-[24px] */
+    flex-wrap: wrap;             /* flex-wrap */
+    align-items: center;         /* items-center */
+    justify-content: center;     /* justify-center */
+  }
+
+  .footerLink{
+    display: flex;               /* flex */
+    align-items: center;         /* items-center */
+    gap: 0.5rem;  
+  }
+
+  .footerLink:hover{
+    text-decoration: underline;              /* hover:underline */
+    text-underline-offset: 4px;  
+  }
