@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Links } from "./Links";
 import { Headline } from "./Headline";
 
