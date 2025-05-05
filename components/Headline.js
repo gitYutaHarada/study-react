@@ -1,17 +1,19 @@
 import React from "react";
 
+import classes from "./Hedline.module.css"
+
 export function Headline(props) {
     console.log(props);
     return (
         <div>
             <h1>{props.page} Page</h1>
-            <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-                <li className="mb-2 tracking-[-.01em]">
+            <ol className={classes.headline}>
+                <li className={classes.headline1}>
                     Get started by editing{" "}
                     {props.children}
                     .
                 </li>
-                <li className="tracking-[-.01em]">
+                <li className={classes.headline2}>
                     Save and see your changes instantly.
                 </li>
             </ol>

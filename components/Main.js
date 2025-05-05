@@ -1,9 +1,11 @@
+import classes from "./Main.module.css";
+
 import { Links } from "./Links";
 import { Headline } from "./Headline";
 
 export function Main(props) {
   return (
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className={classes.main}>
         <Headline
           page={props.page}
         >
