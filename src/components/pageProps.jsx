@@ -3,14 +3,14 @@
 import React, { createContext, useState } from "react";
 import { useCounter } from "@/hooks/useCounter";
 import { useInputArray } from "@/hooks/useInputArray";
-import { useBgblack } from "@/hooks/useBgblack";
+import { usebgColor } from "@/hooks/usebgColor";
 
 export const Context = createContext(null);
 
 export function PageProps({ children }) {
   const counter = useCounter();
   const inputArray = useInputArray();
-  useBgblack();
+  usebgColor();
 
   return (
     <Context.Provider value={{ ...counter, ...inputArray }}>
