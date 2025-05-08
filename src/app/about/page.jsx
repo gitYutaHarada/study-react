@@ -8,7 +8,7 @@ import { Main } from "@/components/Main";
 
 export default function About() {
   const {
-    count,
+    doubleCount,
     isShow,
     handleClick,
     handleDisplay,
@@ -17,13 +17,13 @@ export default function About() {
     handleChange,
     handleAdd,
   } = useContext(Context);
-
+  console.log(doubleCount);
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <Header />
       <Main page="about" />
 
-      {isShow ? <h1>{count}</h1> : null}
+      {isShow ? <h1>{doubleCount}</h1> : null}
       <button onClick={handleClick}>ボタン</button>
       <button onClick={handleDisplay}>{isShow ? "非表示" : "表示"}</button>
 
