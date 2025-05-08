@@ -1,5 +1,3 @@
-'use client';
-
 import { Geist, Geist_Mono } from "next/font/google";
 import { PageProps } from "@/components/pageProps";
 import "./globals.css";
@@ -25,9 +23,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <PageProps>
-          {children}
-        </PageProps>
+        <PageProps>{children}</PageProps>
       </body>
     </html>
   );
