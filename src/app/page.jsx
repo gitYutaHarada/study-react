@@ -2,42 +2,35 @@
 
 import React, { useContext } from "react";
 import { Context } from "@/components/pageProps";
+
 import { Footer } from "@/components/Footer";
 import { Main } from "@/components/Main";
 import { Header } from "@/components/Header";
 
-
-export default function Home() {
+const Home = () => {
   console.log(useContext(Context));
-  const {
-    count,
-    isShow,
-    handleClick,
-    handleDisplay,
-    text,
-    array,
-    handleChange,
-    handleAdd,
-  } = useContext(Context);
 
+  const context = useContext(Context);
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <Header />
 
-      {isShow ? <h1>{count}</h1> : null}
-      <button onClick={handleClick}>ボタン</button>
-      <button onClick={handleDisplay}>{isShow ? "非表示" : "表示"}</button>
+      {context.isShow ? <h1>{context.count}</h1> : null}
+      <button onClick={context.handleClick}>ボタン</button>
+      <button onClick={context.handleDisplay}>
+        {context.isShow ? "非表示" : "表示"}
+      </button>
 
       <input
         type="text"
-        value={text}
-        onChange={handleChange}
+        value={context.text}
+        onChange={context.handleChange}
         className="border border-gray-400 rounded px-3 py-2 bg-white"
       />
-      <button onClick={handleAdd}>追加</button>
+      <button onClick={context.handleAdd}>追加</button>
       <ul>
-        {array.map((item) => {
+        {context.array.map((item) => {
           return <li key={item}>{item}</li>;
         })}
       </ul>
@@ -46,4 +39,6 @@ export default function Home() {
       <Footer />
     </div>
   );
-}
+};
+
+export default Home;

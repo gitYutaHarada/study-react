@@ -1,7 +1,7 @@
 import Image from "next/image";
 import classes from "./Links.module.css"
 
-export function Links({ items, handleReduce }) {
+export const Links = ({ items, handleReduce }) => {
   return (
     <div className={classes.links}>
       <button onClick={handleReduce}>減らす</button>
@@ -28,4 +28,4 @@ export function Links({ items, handleReduce }) {
       })}
     </div>
   );
-}
+};
