@@ -40,31 +40,8 @@ export function Links() {
 
             {item.description}
           </a>
-        )
+        );
       })}
-      {/* <a
-            className={classes.linksDeploy}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            start to deploy now
-          </a>
-          <a
-            className={classes.linksRead}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a> */}
     </div>
   );
 }
